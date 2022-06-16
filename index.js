@@ -1,3 +1,4 @@
+var moment = require('moment');  
 const port = 3000
 const express = require('express');
 //const bodyParser = require('body-parser');
@@ -32,7 +33,7 @@ app.post('/calculate', (req, res) => {
     var result = ""
     try{
         result = req.body.operation.split(',').join('').split('[').join('').split(']').join('').split('"').join('')
-        connection.query('INSERT calculator_historic (user_name,operation,result) VALUES (?,?,?)', [req.body['user'],result,eval(result)],(error, results) => {
+        connection.query('INSERT calculator_historic (user_name,operation,result,created_at) VALUES (?,?,?,?)', [req.body['user'],result,eval(result),moment().format()],(error, results) => {
         if (error) return res.json({ error: error });
             //console.log("ERROR")
         });

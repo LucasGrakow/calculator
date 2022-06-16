@@ -25,10 +25,11 @@ CREATE TABLE IF NOT EXISTS `calculator_historic` (
   `user_name` varchar(50) DEFAULT NULL,
   `operation` varchar(50) NOT NULL,
   `result` double unsigned NOT NULL DEFAULT 0,
+  `created_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=218 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Copiando dados para a tabela calculator.calculator_historic: ~188 rows (aproximadamente)
+-- Copiando dados para a tabela calculator.calculator_historic: ~0 rows (aproximadamente)
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
