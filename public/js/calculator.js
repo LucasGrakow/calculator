@@ -142,7 +142,7 @@ function drawHistoric() {
     function(response){
         $(".paperHistoric").html(`
             ${response.result.map( historic => `
-                <h2> ${historic.operation} = ${historic.result} - ${historic.user_name} <br>${Date(historic.created_at)}</h2>
+                <h2> ${historic.operation} = ${historic.result} - ${historic.user_name} <br>${historic.created_at}</h2>
             `)
             .join("")}
         `);
