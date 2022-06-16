@@ -45,7 +45,7 @@ app.post('/calculate', (req, res) => {
 
 app.post('/historic', (req, res) => {
     connection.query(
-        'SELECT * FROM `calculator_historic` ORDER BY id DESC LIMIT 14',
+        'SELECT * FROM `calculator_historic` ORDER BY id DESC LIMIT 8',
         function(err, results, fields) {
         res.send({ result: results})
         }
