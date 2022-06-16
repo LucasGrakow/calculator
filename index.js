@@ -8,7 +8,7 @@ const mysql = require('mysql2');
 const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  database: 'high'
+  database: 'calculator'
 });
 
 //app.use(bodyParser.urlencoded({ extended: true }));
